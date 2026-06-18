@@ -1,0 +1,107 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{array}
+\geometry{margin=2.2cm}
+\setlength{\parindent}{0pt}
+
+% --- Couleurs de la charte (extraites du CSS du site) ---
+\definecolor{bleunuit}{HTML}{2C3E50}
+\definecolor{turquoise}{HTML}{1ABC9C}
+\definecolor{turquoisefonce}{HTML}{16A085}
+\definecolor{bleu}{HTML}{2980B9}
+\definecolor{fondpage}{HTML}{F4F6F8}
+\definecolor{bleuclair}{HTML}{F0F7FC}
+\definecolor{blanc}{HTML}{FFFFFF}
+\definecolor{grisbord}{HTML}{CCCCCC}
+
+% Pastille de couleur + code hex
+\newcommand{\pastille}[3]{%
+  \begin{tikzpicture}[baseline=-0.6ex]
+    \fill[#1, rounded corners=2pt] (0,0) rectangle (1.1,1.1);
+    \draw[grisbord, rounded corners=2pt] (0,0) rectangle (1.1,1.1);
+  \end{tikzpicture}%
+  \hspace{0.4cm}%
+  \begin{minipage}[c]{6cm}\textbf{#2}\\\texttt{HEX : #3}\end{minipage}%
+}
+
+\title{\textbf{Charte graphique}\\\large Application Web IRVE — Trinôme 9}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-1cm}
+
+% ======================================================
+\section*{Caractéristiques des couleurs utilisées}
+
+\vspace{0.3cm}
+\begin{tabular}{p{7.5cm} p{7.5cm}}
+\pastille{bleunuit}{Bleu nuit}{2C3E50}        & \pastille{turquoise}{Turquoise}{1ABC9C} \\[1.1cm]
+\pastille{bleu}{Bleu}{2980B9}                 & \pastille{turquoisefonce}{Turquoise foncé}{16A085} \\[1.1cm]
+\pastille{bleuclair}{Bleu très clair}{F0F7FC} & \pastille{fondpage}{Gris clair (fond)}{F4F6F8} \\[1.1cm]
+\pastille{blanc}{Blanc}{FFFFFF}               & \pastille{grisbord}{Gris bordure}{CCCCCC} \\[0.6cm]
+\end{tabular}
+
+\vspace{0.4cm}
+\textbf{Rôle de chaque couleur :}
+\begin{itemize}
+  \item \textbf{Bleu nuit (2C3E50)} : en-tête, pied de page, en-têtes de tableau, texte principal.
+  \item \textbf{Turquoise (1ABC9C)} : couleur d'accent — liens actifs, boutons, valeurs des statistiques.
+  \item \textbf{Turquoise foncé (16A085)} : survol des boutons.
+  \item \textbf{Bleu (2980B9)} : titres de section.
+  \item \textbf{Bleu très clair (F0F7FC)} : survol des lignes du tableau.
+  \item \textbf{Gris clair (F4F6F8)} : fond général des pages.
+  \item \textbf{Blanc (FFFFFF)} : fond des cartes et des tableaux.
+\end{itemize}
+
+\vspace{0.5cm}
+% ======================================================
+\section*{Définition des ombres}
+
+\vspace{0.2cm}
+\begin{tabular}{p{7.5cm} p{7.5cm}}
+\textbf{Ombre légère} (cartes, tableaux) & \textbf{Ombre marquée} (image d'accueil) \\[0.2cm]
+\begin{tabular}{ll}
+Décalage en X : & \textbf{0} \\
+Décalage en Y : & \textbf{2} \\
+Flou : & \textbf{6} \\
+Intensité : & \textbf{10\%} \\
+Couleur : & \textbf{Noir} \\
+\end{tabular}
+&
+\begin{tabular}{ll}
+Décalage en X : & \textbf{0} \\
+Décalage en Y : & \textbf{4} \\
+Flou : & \textbf{12} \\
+Intensité : & \textbf{15\%} \\
+Couleur : & \textbf{Noir} \\
+\end{tabular}
+\\[1.5cm]
+\end{tabular}
+
+\vspace{0.3cm}
+\textbf{Rayons d'arrondi :} 5px (boutons, champs), 8px (cartes), 10px (images).
+
+\vspace{0.5cm}
+% ======================================================
+\section*{Police de caractères}
+
+\vspace{0.2cm}
+Toute l'interface utilise la police \textbf{Segoe UI} (avec \textbf{Arial} en remplacement),
+sans-serif, déclinée selon les usages suivants :
+
+\vspace{0.3cm}
+\begin{tabular}{>{\raggedright}p{4.5cm} p{9cm}}
+\textbf{\Large Grand titre} & Titres de page (\texttt{h1}), gras, bleu nuit \\[0.4cm]
+\textbf{\large Sous-titre}  & Titres de section (\texttt{h2}), gras, bleu \\[0.4cm]
+Paragraphe                  & Texte courant, taille normale, bleu nuit \\[0.4cm]
+\textbf{\color{turquoise}38} & Valeurs des statistiques, gras, turquoise \\
+\end{tabular}
+
+\end{document}
